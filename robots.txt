@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://courierconstructionservice.com/sitemap.xml
