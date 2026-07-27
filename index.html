@@ -1,599 +1,145 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Construction Material Delivery | Construction Courier Service</title>
-  <meta name="description" content="Construction material delivery, supplier pickup and jobsite delivery within 30 miles of Mishawaka, Indiana. Same-day and next-business-day options available.">
-  <meta name="theme-color" content="#b41f1f">
-  <meta property="og:title" content="Construction Courier Service">
-  <meta property="og:description" content="Your Crew Builds. We Deliver.">
-  <meta property="og:type" content="website">
-  <style>
-    :root{--red:#b82020;--red-dark:#941717;--ink:#171717;--muted:#666;--line:#d7d7d7;--soft:#f7f7f7;--page:#fff;--max:1180px;--shadow:0 18px 45px rgba(0,0,0,.09)}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--page);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
-    img{display:block;max-width:100%}
-    button,input,textarea{font:inherit}
-    a{color:inherit}
-    .shell{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
-    .rule{height:3px;background:var(--red);width:100%}
-    .section{padding:clamp(54px,7vw,92px) 0}
-    .button{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:13px 30px;border:0;border-radius:999px;background:var(--red);color:#fff;text-decoration:none;font-weight:800;letter-spacing:.01em;transition:.18s ease;cursor:pointer}
-    .button:hover,.button:focus-visible{background:var(--red-dark);transform:translateY(-1px)}
-    .button.secondary{background:#171717}
-    .eyebrow{margin:0 0 8px;color:var(--red);font-size:.78rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
-    h1,h2,h3,p{margin-top:0}
-    h1,h2,h3{line-height:1.12}
-    h2{font-size:clamp(1.9rem,4vw,3.1rem)}
-
-    .site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid #eee}
-    .header-inner{min-height:72px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px}
-    .header-spacer{min-width:1px}
-    .header-action{justify-self:end}
-    .brand{display:inline-grid;justify-items:center;text-decoration:none;text-transform:uppercase;line-height:.9}
-    .brand-roof{position:relative;width:78px;height:18px;margin-bottom:1px}
-    .brand-roof:before,.brand-roof:after{content:"";position:absolute;top:8px;width:43px;height:4px;background:#171717}
-    .brand-roof:before{left:4px;transform:rotate(-24deg);transform-origin:left center}
-    .brand-roof:after{right:4px;transform:rotate(24deg);transform-origin:right center}
-    .brand-main{font-size:.82rem;font-weight:950;letter-spacing:-.03em}
-    .brand-sub{color:var(--red);font-size:.58rem;font-weight:950;letter-spacing:.02em}
-
-    .hero{padding:0 0 28px}
-    .hero-media{width:min(980px,100%);margin:0 auto;aspect-ratio:4/3;overflow:hidden;background:#eee}
-    .hero-media img{width:100%;height:100%;object-fit:cover}
-    .hero-cta{display:flex;justify-content:center;padding:28px 20px 0}
-    .hero-cta .button{width:min(320px,100%)}
-
-    .intro-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.92fr);gap:clamp(38px,7vw,90px);align-items:start}
-    .intro-title{color:#a94040;font-size:clamp(1.8rem,3.8vw,3rem);font-weight:500;margin-bottom:38px}
-    .faq{border-top:1px solid #9e9e9e}
-    .faq details{border-bottom:1px solid #9e9e9e}
-    .faq summary{position:relative;list-style:none;padding:18px 44px 18px 0;font-size:1.04rem;cursor:pointer}
-    .faq summary::-webkit-details-marker{display:none}
-    .faq summary:after{content:"+";position:absolute;right:8px;top:50%;translate:0 -50%;font-size:1.25rem;color:#555}
-    .faq details[open] summary:after{content:"−"}
-    .faq-answer{padding:0 34px 20px 0;color:#555}
-    .faq-answer p:last-child{margin-bottom:0}
-    .map-card{border-radius:24px;overflow:hidden;box-shadow:var(--shadow);border:1px solid #eee}
-
-    .calculator-band{padding:18px 0;border-top:3px solid var(--red);border-bottom:3px solid var(--red)}
-    .calculator-accordion{border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden}
-    .calculator-accordion>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px clamp(18px,4vw,34px);font-weight:900;font-size:clamp(1.15rem,2.6vw,1.55rem)}
-    .calculator-accordion>summary::-webkit-details-marker{display:none}
-    .calculator-accordion>summary:after{content:"Open calculator +";font-size:.82rem;color:var(--red);text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
-    .calculator-accordion[open]>summary{border-bottom:1px solid var(--line)}
-    .calculator-accordion[open]>summary:after{content:"Close calculator −"}
-    .calculator-body{padding:clamp(14px,3vw,26px);background:#fafafa}
-
-    .app-section{background:#fbfbfb}
-    .app-heading{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:24px}
-    .app-heading h2{margin-bottom:8px}
-    .app-heading p{color:var(--muted);margin-bottom:0;max-width:700px}
-    .app-frame-wrap{position:relative;overflow:hidden;border:1px solid #ddd;border-radius:18px;background:#fff;box-shadow:var(--shadow)}
-    .app-frame{display:block;width:100%;height:min(760px,78vh);min-height:560px;border:0;background:#fff}
-    .frame-fallback{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:13px 16px;background:#171717;color:#fff;font-size:.88rem}
-    .frame-fallback a{color:#fff;font-weight:800}
-
-    .contact{padding-bottom:70px}
-    .contact h2{text-align:center;color:#d33d3d;font-size:1.35rem;margin-bottom:36px}
-    .contact-form{display:grid;grid-template-columns:1fr 1fr;gap:18px 12px}
-    .field.full{grid-column:1/-1}
-    label{display:block;font-size:.78rem;font-weight:800;margin-bottom:6px}
-    input,textarea{width:100%;border:1px solid #8d8d8d;border-radius:999px;padding:12px 16px;background:#fff}
-    textarea{min-height:118px;border-radius:18px;resize:vertical}
-    input:focus,textarea:focus{outline:3px solid rgba(184,32,32,.15);border-color:var(--red)}
-    .form-actions{grid-column:1/-1;display:flex;align-items:center;gap:16px}
-    .form-status{font-size:.9rem;color:#555}
-
-    .site-footer{padding:56px 0 80px}
-    .footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;align-items:center}
-    .footer-grid .brand{justify-self:start}
-    .footer-grid .button{width:min(280px,100%);justify-self:center}
-    .footer-email{justify-self:end;font-size:1.05rem}
-    .copyright{margin-top:65px;text-align:center;color:#c73b3b;font-size:.75rem;letter-spacing:.32em;font-weight:900}
-
-    @media (max-width:820px){
-      .header-inner{grid-template-columns:1fr auto}
-      .header-spacer{display:none}
-      .brand{justify-self:start}
-      .hero-media{aspect-ratio:4/3}
-      .intro-grid{grid-template-columns:1fr}
-      .map-card{max-width:640px;margin:auto}
-      .app-heading{display:block}
-      .app-heading .button{margin-top:18px}
-      .contact-form{grid-template-columns:1fr}
-      .field.full,.form-actions{grid-column:auto}
-      .footer-grid{grid-template-columns:1fr;justify-items:center;text-align:center}
-      .footer-grid .brand,.footer-grid .button,.footer-email{justify-self:center}
-    }
-    @media (max-width:560px){
-      .shell{width:min(var(--max),calc(100% - 24px))}
-      .header-inner{min-height:64px}
-      .header-action .button{min-height:42px;padding:9px 16px;font-size:.82rem}
-      .brand-main{font-size:.72rem}
-      .section{padding:48px 0}
-      .hero{padding-bottom:18px}
-      .hero-cta{padding-top:18px}
-      .intro-title{margin-bottom:26px}
-      .calculator-accordion>summary{align-items:flex-start;flex-direction:column;gap:8px}
-      .app-frame{min-height:650px;height:82vh}
-      .frame-fallback{align-items:flex-start;flex-direction:column}
-    }
-    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-  </style>
-</head>
-<body>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <span class="header-spacer" aria-hidden="true"></span>
-      <a class="brand" href="#top" aria-label="Construction Courier Service home">
-        <span class="brand-roof" aria-hidden="true"></span>
-        <span class="brand-main">Construction</span>
-        <span class="brand-sub">Courier Service</span>
-      </a>
-      <a class="button header-action" href="#contact">Call Today</a>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero" aria-label="Construction Courier Service delivery truck">
-      <div class="hero-media">
-        <img src="assets/ccs-truck.png" alt="Construction Courier Service pickup truck delivering building materials to a jobsite" width="1448" height="1086" fetchpriority="high">
-      </div>
-      <div class="rule"></div>
-      <div class="hero-cta"><a class="button" href="#delivery-app">Schedule A Delivery</a></div>
-    </section>
-    <div class="rule"></div>
-
-    <section class="section">
-      <div class="shell intro-grid">
-        <div>
-          <h1 class="intro-title">Your crew works. We deliver.</h1>
-          <div class="faq" aria-label="Frequently asked questions">
-            <details>
-              <summary>What does Construction Courier Service deliver?</summary>
-              <div class="faq-answer">
-                <p>Construction Courier Service provides construction material delivery for lumber, pipe, conduit, construction supplies, contractor materials, and jobsite materials.</p>
-                <p>Our pickup truck with rack is ideal for jobsite material delivery up to 1,000 lb.</p>
-                <p>Reach out today for more information.</p>
-              </div>
-            </details>
-            <details>
-              <summary>Do you pick up materials from suppliers?</summary>
-              <div class="faq-answer">
-                <p>Yes. We provide supplier pickup direct to your jobsite.</p>
-                <p>Place the order with your supplier, then complete the delivery request.</p>
-                <p>Your crew works. We deliver.</p>
-              </div>
-            </details>
-            <details>
-              <summary>What delivery options are available?</summary>
-              <div class="faq-answer">
-                <p>Rush, same-day, after-hours rush, and next-business-day delivery options are available. Timing depends on supplier readiness, route availability, and load requirements.</p>
-              </div>
-            </details>
-            <details>
-              <summary>What areas do you serve?</summary>
-              <div class="faq-answer">
-                <p>Standard service is available within a 30-mile radius of Mishawaka, Indiana. Custom quotes are available for deliveries outside the standard service area.</p>
-              </div>
-            </details>
-            <details>
-              <summary>How does pricing work?</summary>
-              <div class="faq-answer">
-                <p>Pricing is based on delivery distance, timing, handling requirements, and the size and weight of the load. Complete the delivery request for an exact quote.</p>
-              </div>
-            </details>
-          </div>
-        </div>
-        <figure class="map-card">
-          <img src="assets/service-radius-map.png" alt="Construction Courier Service 30-mile service radius centered on Mishawaka, Indiana" width="1254" height="1254" loading="lazy">
-        </figure>
-      </div>
-    </section>
-
-    <section class="calculator-band" aria-label="Load weight calculator">
-      <div class="shell">
-        <details class="calculator-accordion">
-          <summary>Estimate the weight of your material load</summary>
-          <div class="calculator-body">
-<div id="ccsCalc">
-  <div class="ccs-wrap">
-    <div class="ccs-head">
-      <div>
-        <div class="ccs-kicker">Construction Courier Service</div>
-        <h2>Estimate Your Load Weight</h2>
-        <p>Select each material and quantity. A 15% estimating buffer is added automatically.</p>
-      </div>
-      <div class="ccs-mobile-total"><span>Estimated total</span><strong id="ccsMobileTotal">0 lb</strong></div>
-    </div>
-
-    <div class="ccs-grid">
-      <div>
-        <div class="ccs-section-head">
-          <div>
-            <h3>Materials in this load</h3>
-            <p>Add a separate line for each material or size.</p>
-          </div>
-          <button type="button" class="ccs-link" id="ccsClear">Clear</button>
-        </div>
-
-        <div id="ccsRows"></div>
-        <button type="button" class="ccs-add" id="ccsAdd">+ Add another material</button>
-      </div>
-
-      <aside class="ccs-summary">
-        <div class="ccs-kicker">Estimated load</div>
-        <div class="ccs-big" id="ccsTotal">0 lb</div>
-
-        <div class="ccs-metric"><span>Material subtotal</span><strong id="ccsSubtotal">0 lb</strong></div>
-        <div class="ccs-metric"><span>15% safety buffer</span><strong id="ccsBuffer">0 lb</strong></div>
-        <div class="ccs-metric"><span>Standard service max</span><strong>1,000 lb</strong></div>
-
-        <div class="ccs-status empty" id="ccsStatusBox">
-          <small>Load status</small>
-          <strong id="ccsStatus">Add a material to begin</strong>
-        </div>
-
-        <div class="ccs-handling"><span>Handling</span><strong id="ccsHandling">—</strong></div>
-
-        <p class="ccs-note">Weight is an estimate. Manufacturer, moisture, packaging and product configuration can change actual weight. Final acceptance is confirmed before pickup.</p>
-
-        <button type="button" class="ccs-primary" id="ccsRequest">Request Delivery</button>
-        <button type="button" class="ccs-secondary" id="ccsCopy">Copy Load Summary</button>
-      </aside>
-    </div>
-  </div>
-  <div class="ccs-toast" id="ccsToast"></div>
-</div>
-
-<style>
-#ccsCalc{--red:#c91f18;--dark:#171717;--muted:#666;--line:#ddd;--soft:#f6f6f6;font-family:inherit;color:var(--dark);width:100%}
-#ccsCalc *{box-sizing:border-box}
-#ccsCalc .ccs-wrap{max-width:1180px;margin:auto;padding:clamp(16px,3vw,36px);border:1px solid var(--line);border-radius:18px;background:#fff}
-#ccsCalc h2,#ccsCalc h3,#ccsCalc p{margin-top:0}
-#ccsCalc h2{font-size:clamp(1.8rem,4vw,3rem);line-height:1.05;margin-bottom:10px}
-#ccsCalc h3{margin-bottom:4px}
-#ccsCalc .ccs-head{display:flex;justify-content:space-between;gap:24px;padding-bottom:24px;border-bottom:1px solid var(--line)}
-#ccsCalc .ccs-head p,#ccsCalc .ccs-section-head p{color:var(--muted);margin-bottom:0;line-height:1.5}
-#ccsCalc .ccs-kicker{color:var(--red);font-weight:800;font-size:.76rem;letter-spacing:.11em;text-transform:uppercase;margin-bottom:8px}
-#ccsCalc .ccs-mobile-total{display:none}
-#ccsCalc .ccs-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,360px);gap:clamp(24px,4vw,44px);padding-top:28px;align-items:start}
-#ccsCalc .ccs-section-head{display:flex;justify-content:space-between;gap:16px;align-items:start;margin-bottom:16px}
-#ccsCalc button,#ccsCalc select,#ccsCalc input{font:inherit}
-#ccsCalc button{cursor:pointer}
-#ccsCalc .ccs-link{border:0;background:transparent;color:var(--red);font-weight:800;padding:6px 0}
-#ccsCalc .ccs-row{padding:17px;margin-bottom:14px;border:1px solid var(--line);border-radius:13px;background:#fff}
-#ccsCalc .ccs-row-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px;font-weight:800}
-#ccsCalc .ccs-remove{border:0;background:transparent;color:#777;font-weight:700}
-#ccsCalc .ccs-remove:hover{color:var(--red)}
-#ccsCalc .ccs-fields{display:grid;grid-template-columns:.8fr 1.4fr;gap:12px}
-#ccsCalc label{display:block;font-size:.78rem;font-weight:800;margin-bottom:6px}
-#ccsCalc select,#ccsCalc input[type=number]{width:100%;min-height:48px;border:1px solid #ccc;border-radius:9px;background:#fff;padding:10px 12px;font-size:16px;color:#171717}
-#ccsCalc select:focus,#ccsCalc input:focus{outline:3px solid rgba(201,31,24,.15);border-color:var(--red)}
-#ccsCalc select:disabled{background:#f1f1f1;color:#888}
-#ccsCalc .ccs-row-bottom{display:grid;grid-template-columns:190px 1fr;gap:12px;align-items:end;margin-top:12px}
-#ccsCalc .ccs-qty{display:grid;grid-template-columns:44px 1fr 44px;gap:6px}
-#ccsCalc .ccs-qty button{min-height:48px;border:1px solid #ccc;border-radius:9px;background:var(--soft);font-size:1.2rem;font-weight:800}
-#ccsCalc .ccs-qty input{text-align:center;padding:6px}
-#ccsCalc .ccs-line-weight{display:flex;justify-content:space-between;gap:12px;align-items:center;min-height:48px;padding:10px 13px;border-radius:9px;background:var(--soft)}
-#ccsCalc .ccs-line-weight span{color:var(--muted);font-size:.84rem}
-#ccsCalc .ccs-meta{font-size:.8rem;color:var(--muted);margin:10px 0 0}
-#ccsCalc .ccs-add{width:100%;min-height:52px;border:2px dashed #c7c7c7;border-radius:11px;background:#fff;font-weight:800}
-#ccsCalc .ccs-add:hover{border-color:var(--red);color:var(--red)}
-#ccsCalc .ccs-summary{position:sticky;top:20px;padding:23px;border-radius:15px;background:#161616;color:#fff}
-#ccsCalc .ccs-summary .ccs-kicker{color:#ff746d}
-#ccsCalc .ccs-big{font-size:clamp(2.5rem,6vw,4rem);font-weight:900;line-height:1;margin-bottom:18px}
-#ccsCalc .ccs-metric{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.14)}
-#ccsCalc .ccs-metric span{color:#ccc}
-#ccsCalc .ccs-status{margin-top:18px;padding:14px;border-radius:10px;color:#171717}
-#ccsCalc .ccs-status small{display:block;text-transform:uppercase;font-weight:800;letter-spacing:.08em;margin-bottom:4px}
-#ccsCalc .ccs-status.empty{background:#eee}
-#ccsCalc .ccs-status.safe{background:#eaf6ef;color:#14753d}
-#ccsCalc .ccs-status.review{background:#fff6d8;color:#805400}
-#ccsCalc .ccs-status.near{background:#fff0e4;color:#913a00}
-#ccsCalc .ccs-status.over{background:#fdeaea;color:#a61b1b}
-#ccsCalc .ccs-handling{display:flex;justify-content:space-between;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.14)}
-#ccsCalc .ccs-handling span{color:#ccc}
-#ccsCalc .ccs-handling strong{text-align:right}
-#ccsCalc .ccs-note{font-size:.76rem;color:#bbb;line-height:1.5;margin:14px 0 17px}
-#ccsCalc .ccs-primary,#ccsCalc .ccs-secondary{width:100%;min-height:50px;border-radius:9px;font-weight:850}
-#ccsCalc .ccs-primary{border:1px solid var(--red);background:var(--red);color:#fff;margin-bottom:9px}
-#ccsCalc .ccs-secondary{border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff}
-#ccsCalc .ccs-toast{position:fixed;left:50%;bottom:22px;z-index:99999;transform:translate(-50%,130%);opacity:0;transition:.2s;padding:11px 15px;border-radius:8px;background:#111;color:#fff;box-shadow:0 8px 25px rgba(0,0,0,.25);text-align:center;max-width:calc(100vw - 30px)}
-#ccsCalc .ccs-toast.show{transform:translate(-50%,0);opacity:1}
-@media(max-width:900px){
-  #ccsCalc .ccs-head{display:block}
-  #ccsCalc .ccs-mobile-total{display:flex;justify-content:space-between;align-items:center;margin-top:17px;padding:12px 14px;background:var(--soft);border-radius:9px}
-  #ccsCalc .ccs-grid{grid-template-columns:1fr}
-  #ccsCalc .ccs-summary{position:static}
-}
-@media(max-width:620px){
-  #ccsCalc .ccs-wrap{padding:17px 13px;border-inline:0}
-  #ccsCalc .ccs-fields,#ccsCalc .ccs-row-bottom{grid-template-columns:1fr}
-  #ccsCalc .ccs-row{padding:14px}
-}
-</style>
-
-<script>
-(function(){
-"use strict";
-
-const SETTINGS={
-  safetyBuffer:.15,
-  reviewThreshold:700,
-  nearLimitThreshold:900,
-  serviceMax:1000,
-  bedLengthIn:67,
-  oversizeLengthIn:144,
-
-  // CHANGE THIS TO YOUR ACTUAL SQUARESPACE REQUEST/QUOTE PAGE:
-  requestUrl:"#delivery-app"
-};
-
-const CATEGORIES=["Lumber", "Pipe & Conduit", "Drywall", "Roofing Materials", "Electrical Supplies", "Plumbing Materials"];
-const RAW=[["c001","Lumber","2x4 lumber","10 ft","board",12.5,120.0,1],["c002","Lumber","2x4 lumber","12 ft","board",15.0,144.0,1],["c003","Lumber","2x4 lumber","8 ft","board",10.0,96.0,1],["c004","Lumber","2x6 lumber","10 ft","board",20.0,120.0,1],["c005","Lumber","2x6 lumber","12 ft","board",24.0,144.0,1],["c006","Lumber","2x6 lumber","8 ft","board",16.0,96.0,1],["c007","Lumber","4x4 post","10 ft","post",40.0,120.0,1],["c008","Lumber","4x4 post","8 ft","post",32.0,96.0,1],["c009","Lumber","OSB sheathing","7/16 in. 4x8","sheet",46.0,96.0,1],["c010","Lumber","Plywood","1/2 in. 4x8","sheet",50.0,96.0,1],["c011","Lumber","Plywood","3/4 in. 4x8","sheet",75.0,96.0,1],["c012","Lumber","Trim board","1x6x8","board",5.0,96.0,1],["c013","Pipe & Conduit","EMT conduit","1 in. x 10 ft","stick",6.5,120.0,1],["c014","Pipe & Conduit","EMT conduit","1-1/2 in. x 10 ft","stick",12.0,120.0,1],["c015","Pipe & Conduit","EMT conduit","1/2 in. x 10 ft","stick",3.0,120.0,1],["c016","Pipe & Conduit","EMT conduit","2 in. x 10 ft","stick",18.0,120.0,1],["c017","Pipe & Conduit","EMT conduit","3/4 in. x 10 ft","stick",4.5,120.0,1],["c018","Pipe & Conduit","PVC conduit","1 in. x 10 ft","stick",4.5,120.0,1],["c019","Pipe & Conduit","PVC conduit","1/2 in. x 10 ft","stick",2.0,120.0,1],["c020","Pipe & Conduit","PVC conduit","2 in. x 10 ft","stick",9.0,120.0,1],["c021","Pipe & Conduit","PVC conduit","3/4 in. x 10 ft","stick",3.0,120.0,1],["c022","Drywall","Fire-rated drywall","5/8 in. 4x12","sheet",105.0,144.0,1],["c023","Drywall","Fire-rated drywall","5/8 in. 4x8","sheet",70.0,96.0,1],["c024","Drywall","Moisture-resistant drywall","1/2 in. 4x8","sheet",57.0,96.0,1],["c025","Drywall","Regular drywall","1/2 in. 4x10","sheet",65.0,120.0,1],["c026","Drywall","Regular drywall","1/2 in. 4x12","sheet",78.0,144.0,1],["c027","Drywall","Regular drywall","1/2 in. 4x8","sheet",52.0,96.0,1],["c028","Roofing Materials","Architectural shingles","Standard bundle","bundle",75.0,39.0,0],["c029","Roofing Materials","Asphalt shingles","Standard bundle","bundle",70.0,39.0,0],["c030","Roofing Materials","Drip edge","10 ft length","piece",2.0,120.0,1],["c031","Roofing Materials","Felt underlayment","15 lb roll","roll",50.0,36.0,0],["c032","Roofing Materials","Flashing roll","Standard roll","roll",25.0,24.0,0],["c033","Roofing Materials","Ice & water shield","Standard roll","roll",60.0,36.0,0],["c034","Roofing Materials","Roll roofing","36 in. roll","roll",90.0,36.0,0],["c035","Roofing Materials","Synthetic underlayment","Standard roll","roll",25.0,48.0,0],["c036","Electrical Supplies","Breaker panel","Empty panel","panel",30.0,36.0,0],["c037","Electrical Supplies","Electrical boxes","Case","case",25.0,24.0,0],["c038","Electrical Supplies","Fixture boxes","Small case","case",20.0,24.0,0],["c039","Electrical Supplies","NM-B wire","12/2, 250 ft roll","roll",20.0,12.0,0],["c040","Electrical Supplies","NM-B wire","14/2, 250 ft roll","roll",16.0,12.0,0],["c041","Electrical Supplies","THHN wire spool","#12, 500 ft","spool",22.0,12.0,0],["c042","Plumbing Materials","Copper pipe","1/2 in. x 10 ft","stick",3.0,120.0,1],["c043","Plumbing Materials","Copper pipe","3/4 in. x 10 ft","stick",5.0,120.0,1],["c044","Plumbing Materials","Fittings box","Small box","box",25.0,18.0,0],["c045","Plumbing Materials","PEX tubing","1/2 in., 100 ft coil","coil",5.0,24.0,0],["c046","Plumbing Materials","PEX tubing","3/4 in., 100 ft coil","coil",8.0,24.0,0],["c047","Plumbing Materials","PVC DWV pipe","2 in. x 10 ft","stick",6.0,120.0,1],["c048","Plumbing Materials","PVC DWV pipe","3 in. x 10 ft","stick",12.0,120.0,1],["c049","Plumbing Materials","PVC DWV pipe","4 in. x 10 ft","stick",17.0,120.0,1],["c050","Plumbing Materials","Valve box","Small box","box",30.0,18.0,0]];
-const MATERIALS=RAW.map(([id,c,n,s,u,w,l,r])=>({id,c,n,s,u,w,l,r:Boolean(r)}));
-
-const root=document.getElementById("ccsCalc");
-if(!root)return;
-const rowsEl=root.querySelector("#ccsRows");
-const toast=root.querySelector("#ccsToast");
-let rows=[blankRow()];
-let toastTimer;
-
-function blankRow(){return{category:"",materialId:"",qty:1}}
-function material(id){return MATERIALS.find(x=>x.id===id)||null}
-function esc(v){return String(v??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;")}
-function lb(v){const n=Number(v)||0;return n.toLocaleString("en-US",{minimumFractionDigits:0,maximumFractionDigits:n<10?1:0})+" lb"}
-function label(m){return `${m.n} — ${m.s} — per ${m.u}`}
-function qty(v){const n=Math.floor(Number(v));return Number.isFinite(n)&&n>0?n:1}
-
-function categoryOptions(selected){
-  return '<option value="">Choose a category</option>'+CATEGORIES.map(c=>`<option value="${esc(c)}" ${c===selected?"selected":""}>${esc(c)}</option>`).join("");
-}
-
-function materialOptions(row){
-  if(!row.category)return '<option value="">Choose a category first</option>';
-  const list=MATERIALS.filter(m=>m.c===row.category);
-  return '<option value="">Choose a material</option>'+list.map(m=>`<option value="${m.id}" ${m.id===row.materialId?"selected":""}>${esc(label(m))}</option>`).join("");
-}
-
-function render(){
-  rowsEl.innerHTML=rows.map((row,i)=>{
-    const m=material(row.materialId);
-    const line=m?m.w*row.qty:0;
-    const handling=m?(m.r||(m.l&&m.l>SETTINGS.bedLengthIn)?"Rack likely required":"Standard bed loading likely"):"Select a material to see handling";
-    const length=m&&m.l?`${m.l} in. long`:"Length varies or was not listed";
-    return `<div class="ccs-row">
-      <div class="ccs-row-top"><span>Material ${i+1}</span><button type="button" class="ccs-remove" data-remove="${i}">Remove</button></div>
-      <div class="ccs-fields">
-        <div><label>Category</label><select data-category="${i}">${categoryOptions(row.category)}</select></div>
-        <div><label>Material and size</label><select data-material="${i}" ${row.category?"":"disabled"}>${materialOptions(row)}</select></div>
-      </div>
-      <div class="ccs-row-bottom">
-        <div>
-          <label>Quantity</label>
-          <div class="ccs-qty">
-            <button type="button" data-minus="${i}" aria-label="Decrease quantity">−</button>
-            <input type="number" min="1" step="1" inputmode="numeric" value="${row.qty}" data-qty="${i}">
-            <button type="button" data-plus="${i}" aria-label="Increase quantity">+</button>
-          </div>
-        </div>
-        <div class="ccs-line-weight"><span>Estimated line weight</span><strong>${lb(line)}</strong></div>
-      </div>
-      <p class="ccs-meta">${m?`${lb(m.w)} per ${esc(m.u)} · ${esc(length)} · ${esc(handling)}`:"Select a material and quantity to calculate this line."}</p>
-    </div>`;
-  }).join("");
-
-  bind();
-  updateSummary();
-}
-
-function bind(){
-  root.querySelectorAll("[data-category]").forEach(el=>el.onchange=e=>{
-    const i=Number(e.currentTarget.dataset.category);
-    rows[i].category=e.currentTarget.value;
-    rows[i].materialId="";
-    render();
-  });
-  root.querySelectorAll("[data-material]").forEach(el=>el.onchange=e=>{
-    rows[Number(e.currentTarget.dataset.material)].materialId=e.currentTarget.value;
-    render();
-  });
-  root.querySelectorAll("[data-qty]").forEach(el=>el.onchange=e=>{
-    rows[Number(e.currentTarget.dataset.qty)].qty=qty(e.currentTarget.value);
-    render();
-  });
-  root.querySelectorAll("[data-minus]").forEach(el=>el.onclick=e=>{
-    const i=Number(e.currentTarget.dataset.minus);
-    rows[i].qty=Math.max(1,rows[i].qty-1);
-    render();
-  });
-  root.querySelectorAll("[data-plus]").forEach(el=>el.onclick=e=>{
-    const i=Number(e.currentTarget.dataset.plus);
-    rows[i].qty++;
-    render();
-  });
-  root.querySelectorAll("[data-remove]").forEach(el=>el.onclick=e=>{
-    const i=Number(e.currentTarget.dataset.remove);
-    rows.length===1?rows=[blankRow()]:rows.splice(i,1);
-    render();
-  });
-}
-
-function calc(){
-  const selected=rows.map(row=>{
-    const m=material(row.materialId);
-    return m?{row,m,line:m.w*row.qty}:null;
-  }).filter(Boolean);
-  const subtotal=selected.reduce((a,x)=>a+x.line,0);
-  const buffer=subtotal*SETTINGS.safetyBuffer;
-  const total=subtotal+buffer;
-  const maxLength=selected.reduce((a,x)=>Math.max(a,x.m.l||0),0);
-  const rack=selected.some(x=>x.m.r||(x.m.l&&x.m.l>SETTINGS.bedLengthIn));
-  return{selected,subtotal,buffer,total,maxLength,rack};
-}
-
-function status(total,count){
-  if(!count)return{cls:"empty",text:"Add a material to begin"};
-  if(total<=SETTINGS.reviewThreshold)return{cls:"safe",text:"Likely within the standard service range"};
-  if(total<=SETTINGS.nearLimitThreshold)return{cls:"review",text:"Review recommended before pickup"};
-  if(total<=SETTINGS.serviceMax)return{cls:"near",text:"Near the service limit — confirmation required"};
-  return{cls:"over",text:"Over the standard service max — split delivery or special quote required"};
-}
-
-function handling(c){
-  if(!c.selected.length)return"—";
-  if(c.maxLength>SETTINGS.oversizeLengthIn)return"Oversized item — call to confirm";
-  if(c.rack)return"Rack likely required";
-  return"Standard bed loading likely";
-}
-
-function updateSummary(){
-  const c=calc(),s=status(c.total,c.selected.length),box=root.querySelector("#ccsStatusBox");
-  root.querySelector("#ccsSubtotal").textContent=lb(c.subtotal);
-  root.querySelector("#ccsBuffer").textContent=lb(c.buffer);
-  root.querySelector("#ccsTotal").textContent=lb(c.total);
-  root.querySelector("#ccsMobileTotal").textContent=lb(c.total);
-  root.querySelector("#ccsStatus").textContent=s.text;
-  root.querySelector("#ccsHandling").textContent=handling(c);
-  box.className="ccs-status "+s.cls;
-}
-
-function summaryText(){
-  const c=calc(),s=status(c.total,c.selected.length);
-  const lines=c.selected.map((x,i)=>`${i+1}. ${x.row.qty} × ${label(x.m)} — ${lb(x.line)}`);
-  return[
-    "CONSTRUCTION COURIER SERVICE — ESTIMATED LOAD","",
-    ...(lines.length?lines:["No materials selected."]),"",
-    `Material subtotal: ${lb(c.subtotal)}`,
-    `Safety buffer (15%): ${lb(c.buffer)}`,
-    `Estimated total: ${lb(c.total)}`,
-    `Standard service max: ${lb(SETTINGS.serviceMax)}`,
-    `Load status: ${s.text}`,
-    `Handling: ${handling(c)}`,"",
-    "Estimate only. Final acceptance is confirmed before pickup."
-  ].join("\n");
-}
-
-async function copy(text){
-  try{await navigator.clipboard.writeText(text);return true}
-  catch(e){
-    const t=document.createElement("textarea");
-    t.value=text;t.style.position="fixed";t.style.opacity="0";
-    document.body.appendChild(t);t.select();
-    let ok=false;try{ok=document.execCommand("copy")}catch(_){}
-    t.remove();return ok;
-  }
-}
-
-function show(message){
-  clearTimeout(toastTimer);
-  toast.textContent=message;
-  toast.classList.add("show");
-  toastTimer=setTimeout(()=>toast.classList.remove("show"),2800);
-}
-
-root.querySelector("#ccsAdd").onclick=()=>{rows.push(blankRow());render();rowsEl.lastElementChild?.scrollIntoView({behavior:"smooth",block:"center"})};
-root.querySelector("#ccsClear").onclick=()=>{rows=[blankRow()];render()};
-root.querySelector("#ccsCopy").onclick=async()=>show(await copy(summaryText())?"Load summary copied.":"Could not copy automatically.");
-root.querySelector("#ccsRequest").onclick=async()=>{
-  const c=calc();
-  if(!c.selected.length){show("Add at least one material first.");return}
-  const ok=await copy(summaryText());
-  show(ok?"Summary copied. Paste it into the request form.":"Opening the request form.");
-  if(SETTINGS.requestUrl){
-    setTimeout(()=>{
-      if(SETTINGS.requestUrl.startsWith("#")){
-        document.querySelector(SETTINGS.requestUrl)?.scrollIntoView({behavior:"smooth",block:"start"});
-      }else{
-        location.href=SETTINGS.requestUrl;
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Same-day construction material delivery, supplier pickup and jobsite delivery serving Mishawaka, South Bend, Elkhart, Niles and nearby Michiana communities." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#b52222" />
+    <link rel="canonical" href="https://courierconstructionservice.com/" />
+    <link rel="icon" href="assets/construction-courier-logo.png" />
+    <link rel="preload" as="image" href="assets/courier-hero.png" fetchpriority="high" />
+    <meta property="og:title" content="Construction Material Delivery Across Michiana" />
+    <meta property="og:description" content="Supplier pickup and direct jobsite delivery for contractors in Mishawaka, South Bend, Elkhart, Niles and nearby communities." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Construction Courier Service" />
+    <meta property="og:url" content="https://courierconstructionservice.com/" />
+    <meta property="og:image" content="https://courierconstructionservice.com/assets/courier-hero.png" />
+    <meta property="og:image:alt" content="Construction Courier Service truck delivering construction materials to a Michiana jobsite" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Construction Material Delivery Across Michiana" />
+    <meta name="twitter:description" content="Local supplier pickup and same-day jobsite delivery for contractors." />
+    <meta name="twitter:image" content="https://courierconstructionservice.com/assets/courier-hero.png" />
+    <title>Construction Material Delivery Across Michiana | CCS</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://courierconstructionservice.com/#business",
+      "name": "Construction Courier Service",
+      "url": "https://courierconstructionservice.com/",
+      "telephone": "+1-574-904-6108",
+      "email": "Chris@constructioncourierservice.com",
+      "logo": "https://courierconstructionservice.com/assets/construction-courier-logo.png",
+      "image": "https://courierconstructionservice.com/assets/courier-hero.png",
+      "description": "Same-day construction material delivery, supplier pickup and jobsite delivery within 30 miles of Mishawaka, Indiana.",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Mishawaka, Indiana"
+        },
+        {
+          "@type": "City",
+          "name": "South Bend, Indiana"
+        },
+        {
+          "@type": "City",
+          "name": "Elkhart, Indiana"
+        },
+        {
+          "@type": "City",
+          "name": "Niles, Michigan"
+        }
+      ],
+      "makesOffer": {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Construction Material Delivery",
+          "serviceType": [
+            "Same-day construction material delivery",
+            "Jobsite delivery",
+            "Construction supplier pickup",
+            "Rush delivery",
+            "Multi-stop delivery"
+          ]
+        }
       }
-    },600);
-  }
-};
-
-render();
-})();
-</script>
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://courierconstructionservice.com/#service-areas",
+      "name": "Construction Courier Service Areas",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Mishawaka, IN",
+          "url": "https://courierconstructionservice.com/mishawaka/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "South Bend, IN",
+          "url": "https://courierconstructionservice.com/south-bend/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Elkhart, IN",
+          "url": "https://courierconstructionservice.com/elkhart/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Niles, MI",
+          "url": "https://courierconstructionservice.com/niles/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Construction Courier Service home"><img src="assets/construction-courier-logo.png" alt="Construction Courier Service logo" width="488" height="202" /></a>
+      <a class="button button-small call-link" href="tel:+15749046108">Call Today</a>
+    </header>
+    <main>
+      <section class="hero" id="top" aria-label="Construction material delivery across Michiana"><img src="assets/courier-hero.png" alt="Construction Courier Service truck providing construction material delivery to a Michiana jobsite" width="1448" height="1086" /></section>
+      <section class="primary-action" aria-label="Schedule a delivery"><a class="button button-wide" href="#delivery-request">Schedule A Delivery</a></section>
+      <section class="local-intro section-shell" aria-labelledby="main-title">
+        <p class="eyebrow">Local supplier pickup and jobsite delivery</p>
+        <h1 id="main-title">Construction material delivery across Michiana</h1>
+        <p class="local-tagline">Your crew works. We deliver.</p>
+        <p class="local-summary">Construction Courier Service picks up contractor materials from local suppliers and delivers them directly to jobsites within 30 miles of Mishawaka, including South Bend, Elkhart and Niles.</p>
+      </section>
+      <section class="faq-map section-shell">
+        <div class="faq-column">
+          <h2>Keep skilled workers on the jobsite</h2>
+          <div class="accordion-list">
+            <details class="accordion" open><summary><span>What does Construction Courier Service deliver?</span><span class="accordion-icon" aria-hidden="true"></span></summary><div class="accordion-answer"><p>We provide construction material delivery for lumber, pipe, conduit, construction supplies, contractor materials and other jobsite items that fit safely within our pickup truck and rack capacity. Loads may weigh up to 1,000 pounds.</p><p><a class="inline-action" href="tel:+15749046108">Call</a> or <a class="inline-action" href="#delivery-request">submit the delivery request form</a> for availability.</p></div></details>
+            <details class="accordion"><summary><span>Do you pick up materials from suppliers?</span><span class="accordion-icon" aria-hidden="true"></span></summary><div class="accordion-answer"><p>Yes. Place the order with your preferred supplier, then provide the pickup location, jobsite and timing. We will confirm the route and deliver the order directly to your crew.</p><p class="faq-emphasis">Your crew works. We deliver.</p></div></details>
+            <details class="accordion"><summary><span>What delivery options are available?</span><span class="accordion-icon" aria-hidden="true"></span></summary><div class="accordion-answer"><p>Available options include same-day construction material delivery, rush jobsite delivery, after-hours delivery, next-business-day delivery and multi-stop delivery, subject to availability.</p></div></details>
+            <details class="accordion"><summary><span>What areas do you serve?</span><span class="accordion-icon" aria-hidden="true"></span></summary><div class="accordion-answer"><p>We serve locations within 30 miles of Mishawaka, Indiana, including South Bend, Granger, Elkhart, Goshen, Niles and nearby communities. Custom quotes are available for longer routes.</p></div></details>
+            <details class="accordion"><summary><span>How does pricing work?</span><span class="accordion-icon" aria-hidden="true"></span></summary><div class="accordion-answer"><p>Pricing depends on delivery type, distance, timing, route details, material size and whether the job requires rush, after-hours or multi-stop service. Pricing is confirmed before scheduling.</p></div></details>
           </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="section app-section" id="delivery-app">
-      <div class="shell">
-        <div class="app-heading">
-          <div>
-            <p class="eyebrow">Online delivery portal</p>
-            <h2>Schedule or track a delivery</h2>
-            <p>The delivery application is embedded below. Use the open-app button if your browser blocks the embedded view.</p>
-          </div>
-          <a class="button" href="https://vercel.com/cpdservices4u-3273s-projects/construction-courier-service/HuEsj3PPqQQDAC4jCg1s2qoGVc28" target="_blank" rel="noopener">Open Delivery App</a>
         </div>
-        <div class="app-frame-wrap">
-          <iframe class="app-frame" src="https://vercel.com/cpdservices4u-3273s-projects/construction-courier-service/HuEsj3PPqQQDAC4jCg1s2qoGVc28" title="Construction Courier Service delivery application" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="clipboard-write"></iframe>
-          <div class="frame-fallback">
-            <span>Embedded view not loading?</span>
-            <a href="https://vercel.com/cpdservices4u-3273s-projects/construction-courier-service/HuEsj3PPqQQDAC4jCg1s2qoGVc28" target="_blank" rel="noopener">Open the delivery application in a new tab</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="rule"></div>
-
-    <section class="section contact" id="contact">
-      <div class="shell">
-        <h2>Questions or Comments?</h2>
-        <form class="contact-form" id="contactForm">
-          <div class="field"><label for="firstName">First Name <span aria-hidden="true">*</span></label><input id="firstName" name="firstName" autocomplete="given-name" required></div>
-          <div class="field"><label for="lastName">Last Name <span aria-hidden="true">*</span></label><input id="lastName" name="lastName" autocomplete="family-name" required></div>
-          <div class="field full"><label for="email">Email <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
-          <div class="field full"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
-          <div class="field full"><label for="message">Questions or Comments <span aria-hidden="true">*</span></label><textarea id="message" name="message" required></textarea></div>
-          <div class="form-actions"><button class="button secondary" type="submit">Submit</button><span class="form-status" id="formStatus" role="status"></span></div>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="shell footer-grid">
-      <a class="brand" href="#top" aria-label="Construction Courier Service home">
-        <span class="brand-roof" aria-hidden="true"></span>
-        <span class="brand-main">Construction</span>
-        <span class="brand-sub">Courier Service</span>
-      </a>
-      <a class="button" href="#contact">Call Today</a>
-      <a class="footer-email" href="mailto:Chris@constructioncourierservice.com">Chris@constructioncourierservice.com</a>
-    </div>
-    <div class="copyright">CCS</div>
-  </footer>
-
-  <script>
-    (function(){
-      const form=document.getElementById('contactForm');
-      const status=document.getElementById('formStatus');
-      form.addEventListener('submit',function(event){
-        event.preventDefault();
-        if(!form.reportValidity()) return;
-        const data=new FormData(form);
-        const name=(data.get('firstName')+' '+data.get('lastName')).trim();
-        const subject=encodeURIComponent('Website question from '+name);
-        const body=encodeURIComponent([
-          'Name: '+name,
-          'Email: '+data.get('email'),
-          'Phone: '+(data.get('phone')||'Not provided'),
-          '',
-          data.get('message')
-        ].join('\n'));
-        status.textContent='Opening your email application…';
-        window.location.href='mailto:Chris@constructioncourierservice.com?subject='+subject+'&body='+body;
-      });
-    })();
-  </script>
-</body>
+        <figure class="map-card"><img src="assets/service-radius-map.png" alt="Construction Courier Service 30-mile service radius around Mishawaka, Indiana" width="1254" height="1254" loading="lazy" /><figcaption>Custom quotes are available for deliveries outside the standard 30-mile service area.</figcaption></figure>
+      </section>
+      <nav class="service-area-nav" aria-label="Construction delivery service areas"><div class="section-shell service-area-shell"><p class="eyebrow">Choose your local page</p><h2>Construction delivery service areas</h2><div class="service-area-links"><a href="/mishawaka/">Mishawaka, IN</a>
+<a href="/south-bend/">South Bend, IN</a>
+<a href="/elkhart/">Elkhart, IN</a>
+<a href="/niles/">Niles, MI</a></div></div></nav>
+      <section class="request-section" id="delivery-request"><div class="section-shell request-shell"><div class="section-heading"><p class="eyebrow">Ready when the jobsite needs it</p><h2>Schedule your delivery</h2><p>Place your supplier order, then send the pickup and delivery details. We’ll confirm availability and pricing.</p></div><div class="iframe-wrap" id="iframe-wrap" hidden><iframe id="delivery-iframe" title="Construction Courier Service delivery request" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="payment"></iframe></div><div class="embed-placeholder" id="embed-placeholder"><div><span class="embed-kicker">DELIVERY REQUEST</span><h3>The delivery form will appear here.</h3><p>Add the form URL in <strong>script.js</strong>.</p></div><a class="button" href="mailto:Chris@constructioncourierservice.com?subject=Delivery%20Request">Request By Email</a></div></div></section>
+      <section class="contact-section section-shell" id="contact"><div class="contact-copy"><p class="eyebrow">Questions before you schedule?</p><h2>Tell us what the job needs.</h2><p>Share the material, pickup location, jobsite and timing. We’ll follow up with the best delivery option.</p><a href="mailto:Chris@constructioncourierservice.com">Chris@constructioncourierservice.com</a></div><form class="contact-form" action="mailto:Chris@constructioncourierservice.com" method="post" enctype="text/plain"><div class="field-row"><label>First name<input name="First name" type="text" autocomplete="given-name" required /></label><label>Last name<input name="Last name" type="text" autocomplete="family-name" required /></label></div><label>Email<input name="Email" type="email" autocomplete="email" required /></label><label>Phone<input name="Phone" type="tel" autocomplete="tel" required /></label><label>Questions or comments<textarea name="Questions or comments" rows="4"></textarea></label><button class="button" type="submit">Submit</button></form></section>
+    </main>
+    <footer><img src="assets/construction-courier-logo.png" alt="Construction Courier Service logo" width="488" height="202" loading="lazy" /><a class="button button-wide call-link" href="tel:+15749046108">Call Today</a><a href="mailto:Chris@constructioncourierservice.com">Chris@constructioncourierservice.com</a></footer>
+  </body>
 </html>
